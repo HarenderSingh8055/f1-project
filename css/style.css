@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mulish', sans-serif;
+    background: #FEFEFF;
+}
+
+
+/************HEADER CSS STARTED*************/
+header{
+    background-color: #fff;
+    box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+header nav{
+    height: 80px;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+nav .leftNav{
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+nav .leftNav .leftNavContent{
+    display: flex;
+    align-items: center;
+}
+nav .leftNav .leftNavContent a{
+    font-weight: 700;
+    color: #3d4152;
+    display: inline-block;
+    padding-bottom: 2px;
+    text-decoration: none;
+    border-bottom: 2px solid #3d4152;
+    margin-right: 15px;
+}
+nav .leftNav .leftNavContent a:hover{
+    color: #fc8019;
+    border-bottom-color: #fc8019;
+}
+nav .leftNav .leftNavContent a + span{
+    display: inline-block;
+    font-weight: 300;
+    color: #686b78;
+}
+nav .leftNav .leftNavContent .material-icons{
+    color: #fc8019;
+    margin-left: 5px;
+}
+nav .leftNav img{
+    width: 34px;
+    height: 49px;
+    margin-right: 30px;
+}
+nav .rightNav{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+nav .rightNav .mobileBtn{
+    display: none;
+}
+nav .rightNav ul {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+}
+nav .rightNav ul li{
+    padding: 0 28px;
+}
+nav .rightNav ul li:last-child{
+    padding-right: 0;
+}
+nav .rightNav ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #3d4152;
+    white-space: nowrap;
+}
+nav .rightNav ul li a .material-icons{
+    margin-right: 12px;
+}
+
+
+
+/************MAIN CONTENT CSS STARTED*************/
+
+.mainWrapper{
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.filterBar{
+    padding: 42px 0px 10px 0px;
+    border-bottom:1px solid #e9e9eb ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+.filterBar h3{
+    font-weight: 600;
+    font-size: 28px;
+    color: #282c3f;
+}
+.filterBar .filters ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.filterBar .filters ul li{
+    font-weight: 300;
+    color: #686b78;
+    cursor: pointer;
+    position: relative;
+    margin: 0 18px;
+}
+.filterBar .filters ul li:hover::after{
+    content: "";
+    height: 1px;
+    background: #282c3f;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+}
+.filterBar .filters ul li:last-child{
+    margin-right: 0;
+}
+
+
+.cardMainWrapper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+
+}
+.cardMainWrapper .cardWrapper{
+    padding: 25px;
+    /* border: 1px solid #fff; */
+}
+.cardMainWrapper .cardWrapper a{
+    text-decoration: none;    
+    color: #000;
+}
+.card {
+    position: relative;
+}
+.card img{
+    width: 100%;
+}
+.card .cardContent h5{
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+.card .cardContent p{
+    color: #686b78;
+    font-size: 13px;
+    font-weight: 300;
+}
+.card .cardContent .ratingRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 12px;
+    color: #535665;
+    font-weight: 300;
+}
+hr{
+    margin: 14px 0;
+    color: #e9e9eb;
+    opacity: 0.3;
+}
+.card .cardContent .ratingRow .rating{
+    display: flex;
+    align-items: center;
+    background-color: #db7c38;
+    padding: 2px 6px;
+    color: #fff;
+}
+.card .cardContent .ratingRow .rating .material-icons{
+    font-size: 13px;
+    margin-right: 4px;
+    
+}
+.card .cardContent .ratingRow span b{
+    padding: 0 15px;
+}
+.card .cardContent .offer{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #8a584b;
+    display: flex;
+    align-items: center;
+}
+.card .cardContent .offer .material-icons{
+    font-size: 16px;
+    margin-right: 10px;
+}
+.card .cardContent .btnWrapper{
+    text-align: center;
+    visibility: hidden;
+}
+.card .cardContent .btnWrapper button{
+    color: #5d8ed5;
+    font-size: 13px;
+    border: 0;
+    outline: 0;
+    background: none;
+    font-weight: 500;
+}
+.card .cardContent .promotedBadge{
+    background: rgb(58, 60, 65);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 5px 9px 4px 9px;
+    font-size: 13px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: -8px;
+}
+.card .cardContent .promotedBadge::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    border-top: 10px solid rgb(58, 60, 65);
+    border-left: 9px solid transparent;
+    bottom: -9px;
+}
+.cardWrapper:hover {
+    box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+    outline: 1px solid #d3d5df;
+}
+.cardWrapper:hover .btnWrapper{
+    visibility: visible;
+}
+
+/************FOOTER CSS STARTED*************/
+
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 0 15px;
+}
+footer .footerWrapper{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 76px 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.footerContent ul{
+    padding-left: 0;
+    list-style: none;
+}
+.footerContent ul li{
+    padding: 20px 10px 2px 0;
+    cursor: pointer;
+}
+.footerContent ul li:first-child{
+    color: #808080;
+}
+.footerContent .imgWrapper img{
+    border: 2px solid #808080;
+    padding: 10px;
+    margin: 30px 0px 10px 57px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    height:80px;
+    cursor: pointer;
+}
+.footerContent .imgWrapper img:hover{
+    transform: scale(1.1);
+}
+
+/************RESPONSIVE CSS STARTED*************/
+
+@media screen and (max-width:991px){
+    .cardMainWrapper{
+        grid-template-columns: repeat(3,1fr);
+    }
+    nav .rightNav ul li{
+        padding: 0 8px;
+    }
+    nav .rightNav ul li a .material-icons {
+        margin-right: 4px;
+    }
+    nav .leftNav img{
+        margin-right: 10px;
+    }
+    nav .leftNav .leftNavContent a + span{
+        font-size: 13px;
+    }
+    .filterBar h3{
+        font-size: 18px;
+    }
+    .filterBar .filters ul li {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .cardMainWrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    nav .rightNav ul li{
+        padding: 0 8px;
+    }
+    nav .rightNav ul li a .material-icons {
+        margin-right: 4px;
+    }
+    nav .leftNav img{
+        margin-right: 10px;
+    }
+    nav .leftNav .leftNavContent a + span{
+        font-size: 13px;
+    }
+    .filterBar h3{
+        font-size: 18px;
+    }
+    .filterBar .filters ul li {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+    .filterBar{
+        flex-direction: column;
+    }
+    .filterBar .filters ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .filterBar .filters ul li{
+        margin:5px 10px;
+    }
+
+    nav .rightNav ul{
+        display: none;
+    }
+    footer .footerWrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footerContent .imgWrapper img{
+        margin: 15px 0;
+        height: 60px;
+    }
+    nav .rightNav .mobileBtn{
+        display: block;
+    }
+}
